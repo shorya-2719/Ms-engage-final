@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC Demo</title>
+  </head>
+  <body>
+    <img src="callup Logo.png" width="200px"><br><br>
+    <br>
+    <h2 class="typewriter">Start your Webcam and welcome to CallupX</h2><br><br>
+    <div class="videos">
+      <span>
+        <h3 class="lewandowski">Local Stream</h3>
+        <video id="webcamVideo" autoplay playsinline></video><br>
+        <button class="btn2" id="joshuakimmich">size</button>
+      </span>
+      <span>
+        <h3 class="lewandowski">Remote Stream</h3>
+        <video id="remoteVideo" autoplay playsinline></video>
+        <button class="btn2" id="sergegnabry">size</button>
+      </span>
+    </div><br><br>
+    <button class ="btn" id="theme_button">Dark Mode</button>
+    <button class ="btn" id="webcamButton">Initial Start webcam</button>
+    <button class ="btn" id="muteButton">Mute</button>
+    <button class ="btn" id="presentButton">Present</button>
+    <button class ="btn" id="recordButton">Record</button>
+    <button class ="btn" id="stopwebcam">Stop webcam</button>
+    <h2>Create a new Call</h2>
+    <button class="btn" id="callButton" disabled>Create Call</button>
+
+    <h2>Join a Call</h2>
+    <p>Answer the call from a different browser window or device</p>
+    
+    <input id="callInput" />
+    <button class="btn" id="answerButton" disabled>Answer</button>
+
+    <h2>Hangup</h2>
+
+    
+    <button class="btn" id="hangupButton" onclick="window.location.href='index.html'" >Hangup</button><br><br>
+    <!-- <textarea id="chatArea" disabled></textarea>
+    <button class="openChatBtn" onclick="openForm()">Chat</button>
+<div class="openChat">
+<form>
+<h1>Chat</h1>
+<label for="msg"><b>Message</b></label>
+<textarea placeholder="Type message.." name="msg" id="textArea"></textarea>
+<button class="btn2" id="sendButton">Send</button><br>
+<button class="btn2" onclick="closeForm()">
+Close
+</button>
+</form>
+</div> -->
+<div class="barella">
+  <h3>Text with your friends</h3>
+  <textarea id="chatArea" disabled placeholder="You will receive your messages here"></textarea><br>
+    <textarea id="textArea" placeholder="Send text messages here.." rows="2"></textarea><br><br>
+    <button class="btn2" id="sendButton">Send</button>
+    <button class="btn2" id="clearButton">Clear</button>
+</div><br><br>
+    
+
+    <script type="module" src="/main1.js"></script>
+    <div class="lewandowski9">
+      <h1 id="uh">
+        <center>
+         About CallUpX
+        </center>
+      </h1>
+      <p id="yh">
+        We are a new Video calling website where you can easily interact with your friends.The beta version is up and online and new features are going to be added soon.
+      </p>
+    </div>
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+<script>
+  document .querySelector(".openChatBtn") .addEventListener("click", openForm);
+  document.querySelector(".close").addEventListener("click", closeForm);
+  function openForm() {
+     document.querySelector(".openChat").style.display = "block";
+  }
+  function closeForm() {
+     document.querySelector(".openChat").style.display = "none";
+  }
+ </script>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+             $("#uh").click(function(){
+                $("#yh").slideToggle(500)
+             });
+           });
+  </script>
+</html>
